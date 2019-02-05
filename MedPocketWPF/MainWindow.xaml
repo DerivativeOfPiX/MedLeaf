@@ -1,0 +1,72 @@
+﻿<Window x:Class="MedPocketWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedPocketWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+
+    <StackPanel Orientation="Horizontal"  >
+
+        <!-- Pocket Grid For Store and Display Only!-->
+        <Grid Width="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox x:Name="Cell1" Text="SampleText" MouseDoubleClick="CellClick" Height="100" Width="200"/>
+                <TextBox x:Name="Cell2" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell3" Text="SampleText" Height="100" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="Cell4" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell5" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell6" Text="SampleText" Height="100" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBox x:Name="Cell7" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell8" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell9" Text="SampleText" Height="100" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="3">
+                <TextBox x:Name="Cell10"  Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell11" Text="SampleText" Height="100" Width="200"/>
+                <TextBox x:Name="Cell12" Text="SampleText" Height="100" Width="200"/>
+            </StackPanel>
+        </Grid>
+        
+        <!--Aggregators-->
+        <StackPanel>
+            <TextBox x:Name="_aggr" Height="143" Width="162" Text="Small: 0 Large:0"/>
+            <Button Content="Aggregate" Click="m_Aggr"/>
+        </StackPanel>
+
+        <!--Modifiers -->
+        <StackPanel>
+        <!--For Timing -->
+        <ComboBox x:Name="Timing">
+            <ComboBoxItem IsSelected="True">Morning</ComboBoxItem>
+            <ComboBoxItem>Afternoon</ComboBoxItem>
+            <ComboBoxItem>Evening</ComboBoxItem>
+            <ComboBoxItem>BedTime</ComboBoxItem>
+        </ComboBox>
+ 
+        <!--For Dose-->
+        <ComboBox x:Name="d_Type">
+            <ComboBoxItem IsSelected="True">2 Small 1 Large</ComboBoxItem>
+            <ComboBoxItem>4 Small</ComboBoxItem>
+            <ComboBoxItem>2 Large</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Submit" Click="m_Submit" Margin="0,0,0,590" Width="130"/>
+        </StackPanel>
+    </StackPanel>
+
+</Window>
